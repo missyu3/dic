@@ -1,0 +1,10 @@
+<div class="form">
+  <h1><%= @headline %></h1>
+  <%= form_with(model: @blog, local: true) do |form| %>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %><br><br>
+    <%= form.label :content %><br>
+    <%= form.text_field :content %><br><br>
+    <%= form.submit %>
+  <% end %>
+</div>

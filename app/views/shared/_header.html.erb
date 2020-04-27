@@ -3,11 +3,13 @@
     <div class="loggin">
       <%= link_to "プロフィール", user_mypage_path(current_user.id) %>
       <%= link_to "ログアウト", session_path(current_user.id), method: :delete %>
+      <%= link_to "ブログ一覧", blogs_path %>
     </div>
   <% else %>
     <div class="guest">
       <%= link_to "ログイン", new_session_path %>
       <%= link_to "サインアップ", new_user_path %>
+      <%= link_to "ブログ一覧", blogs_path %>
     </div>
   <% end %>
 </header>
