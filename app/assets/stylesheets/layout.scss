@@ -19,6 +19,12 @@ header {
   padding: 5px;
   background-color: $dark_cyan;
   color: $very_light_gray;
+  
+  a {
+    position: relative;
+    left: 37.5%;
+    padding-right: 25px;
+  }
 }
 
 footer {
