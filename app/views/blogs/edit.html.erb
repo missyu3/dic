@@ -1,9 +1,10 @@
 <h1>ブログ編集</h1>
-<%= form_with(local: true) do |form| %>
+<%= form_with(model:@blog, local: true) do |form| %>
   <%= form.label :title %><br>
   <%= form.text_field :title %><br>
   <%= form.label :content %><br>
   <%= form.text_area :content %>
+  <%= form.submit %>
 <% end %>
 <br>
 <%= link_to '詳細', @blog %> |
