@@ -1,0 +1,8 @@
+<h1>ブログ作成</h1>
+<%= form_with(local: true) do |form| %>
+  <%= form.label :title %><br>
+  <%= form.text_field :title %><br><br>
+  <%= form.label :content %><br>
+  <%= form.text_field :content %><br><br>
+  <%= form.submit %>
+<% end %>
