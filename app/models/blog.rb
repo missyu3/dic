@@ -1,5 +1,2 @@
-class Blog < ApplicationRecord
-
-
-    
+class Blog < ApplicationRecord  
 end
