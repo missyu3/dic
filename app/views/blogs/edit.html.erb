@@ -1,12 +1,12 @@
 <p id="notice"><%= notice %></p>
-  <h3>編集してください</h3>
-  <%= form_with(model: @blog, local: true) do |form| %>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
-    <br>
-    <%= form.label :content %><br>
-    <%= form.text_area :content %>
-  <% end %>
+<h3>編集してください</h3>
+<%= form_with(model: @blog, local: true) do |form| %>
+  <%= form.label :title %><br>
+  <%= form.text_field :title %>
+  <br>
+  <%= form.label :content %><br>
+  <%= form.text_area :content %>
+<% end %>
 <br>
 <%= link_to '詳細', @blog %> |
 <%= link_to '一覧', blogs_path %>

@@ -1,7 +1,6 @@
 class BlogsController < ApplicationController
   def new
-  end
-  def index
+    @blog = Blog.new
   end
   def edit
   end
