@@ -1,7 +1,7 @@
 <header class="header">
   <% if logged_in? %>
     <div class="loggin">
-      <%= link_to "プロフィール", user_path(current_user.id) %>
+      <%= link_to "プロフィール", user_mypage_path(current_user.id) %>
       <%= link_to "ログアウト", session_path(current_user.id), method: :delete %>
     </div>
   <% else %>

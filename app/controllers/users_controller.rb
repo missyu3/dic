@@ -7,7 +7,8 @@ class UsersController < ApplicationController
   def create 
     @user = User.new(user_params)
     if @user.save
-      redirect_to new_session_path(@user.id), notice: "ユーザーを登録しました！"
+      session[:user_id] = @user.id
+      redirect_to user_mypage_path(@user.id), notice: "ユーザーを登録しました！"
     else
       flash.now[:danger] = "ユーザー登録に失敗しました！"
       render :new
@@ -18,7 +19,7 @@ class UsersController < ApplicationController
 
   def update
     if @user.update(user_params)
-      redirect_to user_path(@user.id), notice: "ユーザー情報を更新しました！"
+      redirect_to user_mypage_path(@user.id), notice: "ユーザー情報を更新しました！"
     else
       flash.now[:danger] = "ユーザー情報の更新に失敗しました！"
       render :edit
