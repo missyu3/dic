@@ -1,0 +1,55 @@
+@import "colors";
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+div#wrapper {
+  position: relative;
+  box-sizing: border-box;
+  min-height: 100%;
+  margin: 0 auto;
+  padding-bottom: 48px;
+  background-color: $gray;
+}
+
+header {
+  padding: 5px;
+  background-color: $dark_orange;
+  color: $very_light_gray;
+  
+  a {
+    position: relative;
+    left: 37.5%;
+    padding-right: 25px;
+    color: #ffffff;
+  }
+
+}
+
+footer {
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  background-color: $dark_gray;
+  color: $very_light_gray;
+  p {
+    text-align: center;
+    padding:5px;
+    margin: 0;
+  }
+}
+
+.danger {
+  max-width: 25%;
+  margin: auto;
+  color: red;
+}
+
+.notice {
+  max-width: 25%;
+  margin: auto;
+  color: green;
+}

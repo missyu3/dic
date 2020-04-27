@@ -1,0 +1,19 @@
+<header class="header">
+  <% if logged_in? %>
+    <div class="loggin">
+      <%= link_to "プロフィール", user_mypage_path(current_user.id) %>
+      <%= link_to "ログアウト", session_path(current_user.id), method: :delete %>
+    </div>
+  <% else %>
+    <div class="guest">
+      <%= link_to "ログイン", new_session_path %>
+      <%= link_to "サインアップ", new_user_path %>
+    </div>
+  <% end %>
+</header>
+
+<div class="header_flash">
+  <% flash.each do |key, value| %>
+    <%= content_tag(:div, value, class: key) %>
+  <% end %>
+</div>
