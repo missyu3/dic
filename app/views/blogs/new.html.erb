@@ -1,8 +1,8 @@
 <h1>ブログ作成</h1>
 <%= form_with(model: Blog.new, local: true) do |form| %>
-  <%= form.label :タイトル %><br>
+  <%= form.label :title %><br>
   <%= form.text_field :title %><br><br>
-  <%= form.label :内容 %><br>
+  <%= form.label :content %><br>
   <%= form.text_field :content %><br><br>
   <%= form.submit %>
 <% end %>
