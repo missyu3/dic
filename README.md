@@ -1,24 +1,21 @@
-# README
+# 実行手順
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+```
+git clone https://github.com/missyu3/dic.git
 
-Things you may want to cover:
+cd dic/
 
-* Ruby version
+bin/rails db:create
 
-* System dependencies
+bin/rails db:migrate
 
-* Configuration
+yarn add jquery
 
-* Database creation
+yarn add bootstrap@3
 
-* Database initialization
+bin/rails s
+```
 
-* How to run the test suite
+# 確認用URL
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+http://localhost:3000/
