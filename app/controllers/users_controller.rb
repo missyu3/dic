@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_params, only: [:edit, :update, :show]
+  skip_before_action :login_required, only: [:new, :create] 
+
   def new
     @user = User.new
   end
