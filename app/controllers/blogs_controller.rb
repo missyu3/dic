@@ -1,9 +1,5 @@
 class BlogsController < ApplicationController
-  def show
-      @blog = Blog.find_by(id: params[:id])
-  end
   def new
-    @blog = Blog.new
   end
   def index
   end
