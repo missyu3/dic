@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_params, only: [:edit, :update, :show]
+  before_action :set_params, only: [:edit, :update, :show, :destroy]
   skip_before_action :login_required,only: [:new, :create]
 
   def new
@@ -29,6 +29,12 @@ class UsersController < ApplicationController
   end
 
   def show; end
+
+  def destroy
+    session.delete(:user_id)
+    @user.destroy
+    redirect_to new_session_path, notice: "ユーザーを削除しました！"
+  end
 
   private
   def user_params

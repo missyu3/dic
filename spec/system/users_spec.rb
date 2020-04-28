@@ -36,6 +36,30 @@ RSpec.describe 'Users', type: :system do
         expect(page).to have_content "マイページ"
       end
     end
+
+    context "ユーザー情報を編集した場合" do
+      it "ユーザー情報が更新されること" do
+        click_link "プロフィール"
+        click_link "修正"
+        fill_in "user_name", with: "test User1 update"
+        fill_in "user_email", with: "updatetest1@example.com"
+        fill_in "user_password", with: "testtest"
+        fill_in "user_password_confirmation", with: "testtest"
+        click_button "更新する"
+        expect(page).to have_content "test User1 update"
+        expect(page).to have_content "updatetest1@example.com"
+      end
+    end
+
+    context "ユーザーを削除した場合" do
+      it "ログイン画面に遷移されること" do
+        click_link "プロフィール"
+        click_link "削除"
+        page.driver.browser.switch_to.alert.accept
+        expect(page).to have_content "ユーザーを削除しました！"
+      end
+    end
+
     context "ログアウトした場合" do
       it "ログイン画面に遷移されること" do
         click_link "ログアウト"
